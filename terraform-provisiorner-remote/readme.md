@@ -8,8 +8,8 @@ Step2 - Add the following terraform script so along with the security group with
 ```
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37NXB2BYDLIJUF"
-   secret_key = "JzZKiCia2vjbq4zGGGewdbOhnacm2QIMgcB/jm1/"
+   access_key = ""
+   secret_key = ""
    
 }
 
@@ -66,8 +66,8 @@ use the aws_key.pub inside your terrafrom file -
 ```
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37NXB2BYDLIJUF"
-   secret_key = "JzZKiCia2vjbq4zGGGewdbOhnacm2QIMgcB/jm1/"
+   access_key = ""
+   secret_key = ""
    
 }
 

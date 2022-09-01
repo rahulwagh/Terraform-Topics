@@ -1,7 +1,7 @@
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37XXXXXXXXXXXXXXX"
-   secret_key = "r1oaShokKPw+YYXXXXXXXXXXXXXXXXXXXXXXXXXX"
+   access_key = ""
+   secret_key = ""
 }
 
 locals {

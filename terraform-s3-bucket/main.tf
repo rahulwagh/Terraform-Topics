@@ -1,7 +1,7 @@
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37NXB2MWNYG2FG"
-   secret_key = "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"
+   access_key = ""
+   secret_key = ""
 }
 
 resource "aws_s3_bucket" "spacelift-test1-s3" {

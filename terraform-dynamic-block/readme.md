@@ -1,7 +1,7 @@
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37NXB2BYDLIJUF"
-   secret_key = "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"
+   access_key = ""
+   secret_key = ""
    
 }
 
@@ -75,8 +75,8 @@ resource "aws_key_pair" "deployer" {
 
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37NXB2BYDLIJUF"
-   secret_key = "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"
+   access_key = ""
+   secret_key = ""
    
 }
 

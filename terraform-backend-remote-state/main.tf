@@ -1,7 +1,7 @@
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37NXB2D5QP5CX5"
-   secret_key = "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"
+   access_key = ""
+   secret_key = ""
 }
 
 terraform {
@@ -9,8 +9,8 @@ terraform {
         bucket = "jhooq-terraform-s3-bucket"
         key    = "jhooq/terraform/remote/s3/terraform.tfstate"
         region     = "eu-central-1"
-        #access_key = "AKIATQ37NXB2D5QP5CX5"
-        #secret_key = "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"
+        #access_key = ""
+        #secret_key = ""
     }
 }
 
