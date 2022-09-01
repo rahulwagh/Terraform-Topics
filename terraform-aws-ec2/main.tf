@@ -1,15 +1,13 @@
 provider "aws" {
    region     = "eu-central-1"
-   access_key = "AKIATQ37NXB2MOX7XJJK"
-   secret_key = "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"
+   access_key = "AKIATQ37NXB2I3EUH6NH"
+   secret_key = "ARtwlTVVvnhkM0MDKa6tGIvTtcrKBndrE00nfuvq"
    
 }
 
 resource "aws_instance" "ec2_example" {
-
    ami           = "ami-0767046d1677be5a0"
-   instance_type =  var.instance_type
-
+   instance_type =  "%{ if var.instance_type != "" }${var.instance_type}%{ else }t2.micro%{ endif }"
    tags = {
            Name = "Terraform EC2"
    }
@@ -19,10 +17,10 @@ resource "aws_instance" "ec2_example" {
 variable "instance_type" {
    description = "Instance type t2.micro"
    type        = string
-   default     = "t2.medium"
+   default     = ""
 
-   validation {
-    condition     = can(regex("^[Tt][2-3].(nano|micro|small)", var.instance_type))
-    error_message = "Invalid Instance Type name. You can only choose - t2.nano,t2.micro,t2.small"
-  }
+#  validation {
+#   condition     = can(regex("^[Tt][2-3].(nano|micro|small)", var.instance_type))
+#   error_message = "Invalid Instance Type name. You can only choose - t2.nano,t2.micro,t2.small"
+# }
 }
