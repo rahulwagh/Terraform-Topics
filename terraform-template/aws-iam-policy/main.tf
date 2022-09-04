@@ -13,7 +13,7 @@ resource "aws_iam_access_key" "access_key" {
 }
 
 //Step-1
-/*resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
+resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
   name = "InstanceManagePolicy"
   user = "${aws_iam_user.test_user.name}"
   policy = <<EOF
@@ -36,7 +36,7 @@ resource "aws_iam_access_key" "access_key" {
     ]
 }
 EOF
-}*/
+}
 
 //Step-2
 /*resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
