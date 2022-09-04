@@ -48,7 +48,7 @@ EOF
 }*/
 
 //Step-3
-resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
+/*resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
   name = "InstanceManagePolicy"
   user = "${aws_iam_user.test_user.name}"
   policy = templatefile("${path.module}/user-policy.tftpl", {
@@ -63,7 +63,7 @@ resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
       "ec2:RequestSpotInstances"
     ]
   })
-}
+}*/
 
 output "secret_key" {
   value = aws_iam_access_key.access_key.secret
