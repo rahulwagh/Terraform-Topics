@@ -1,6 +1,6 @@
 locals {
   policy = templatefile("${path.module}/policy.tpl", {
-    name = "Rahul Wagh"
+    name = "Rahul Wagh - locals"
   })
 }
 

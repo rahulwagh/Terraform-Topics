@@ -1,7 +1,7 @@
 data "null_data_source" "policy" {
   inputs = {
     policy = templatefile("${path.module}/policy.tpl", {
-      name = "Rahul Wagh"
+      name = "Rahul Wagh - data source example"
     })
   }
 }
