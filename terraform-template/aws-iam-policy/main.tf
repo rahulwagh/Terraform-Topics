@@ -2,18 +2,14 @@ provider "aws" {
   region = "eu-central-1"
   shared_credentials_files = ["/home/ubuntu/.aws/credentials"]
 }
-
-
 resource "aws_iam_user" "test_user" {
   name = "Test-Terraform-User"
 }
-
 resource "aws_iam_access_key" "access_key" {
   user = aws_iam_user.test_user.name
 }
-
 //Step-1
-resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
+/*resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
   name = "InstanceManagePolicy"
   user = "${aws_iam_user.test_user.name}"
   policy = <<EOF
@@ -36,19 +32,10 @@ resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
     ]
 }
 EOF
-}
-
-//Step-2
-/*resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
-  name = "InstanceManagePolicy"
-  user = "${aws_iam_user.test_user.name}"
-  policy = templatefile("${path.module}/user-policy.tftpl", {
-    name = ""
-  })
 }*/
 
-//Step-3
-/*resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
+//Step-2
+resource "aws_iam_user_policy" "instanceManageUser_assume_role" {
   name = "InstanceManagePolicy"
   user = "${aws_iam_user.test_user.name}"
   policy = templatefile("${path.module}/user-policy.tftpl", {
@@ -63,7 +50,7 @@ EOF
       "ec2:RequestSpotInstances"
     ]
   })
-}*/
+}
 
 output "secret_key" {
   value = aws_iam_access_key.access_key.secret
