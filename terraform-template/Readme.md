@@ -7,7 +7,7 @@ resource "template_file" "policy" {
   template = "${file("${path.module}/policy.tpl")}"
 
   vars = {
-    name = "Justin"
+    name = "Rahul Wagh"
   }
 } 
 ```
@@ -15,7 +15,7 @@ resource "template_file" "policy" {
 ``` 
 locals {
   policy = templatefile("${path.module}/policy.tpl", {
-    name = "Justin"
+    name = "Rahul Wagh"
   })
 }
 ```
@@ -25,7 +25,7 @@ locals {
 data "null_data_source" "policy" {
   inputs = {
     policy = templatefile("${path.module}/policy.tpl", {
-      name = "Justin"
+      name = "Rahul Wagh"
     })
   }
 } 
