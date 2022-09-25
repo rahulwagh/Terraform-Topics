@@ -12,7 +12,7 @@ provider "docker" {
 
 # Pulls the image
 resource "docker_image" "node-js-app" {
-  name = "terrafromvm/node-web-app"
+  name = "ubuntu/docker-node-terraform-app"
   keep_locally = false
 }
 
