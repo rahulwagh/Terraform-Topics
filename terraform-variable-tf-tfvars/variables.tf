@@ -1,13 +1,12 @@
-variable "project_id" {
-  type = string
-  description = "The Project ID"
-}
-variable "github_repo" {
-  type = string
-  description = "The GitHub repo in the format username/repo_name"
-}
 variable "location" {
   type = string
-  description = "The project region"
-  default = "eu-central1"
+  description = "Project region location"
+}
+variable "instance_type" {
+  type = string
+  description = "EC2 Instance type"
+}
+variable "tag" {
+  type = string
+  description = "Tag for EC2 instance"
 }
