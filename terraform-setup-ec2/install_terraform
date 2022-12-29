@@ -1,0 +1,14 @@
+#!/bin/bash
+sudo apt update
+
+sudo snap install terraform --classic
+
+yes | sudo apt install awscli
+
+yes | sudo apt  install docker.io
+
+sudo usermod -aG docker $USER
+
+git clone https://github.com/rahulwagh/Terraform-Topics.git
+
+export PS1='$ '

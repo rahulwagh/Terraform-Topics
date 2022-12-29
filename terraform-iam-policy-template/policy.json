@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+            	"ec2:RunInstances",
+                "ec2:StopInstances",
+                "ec2:StartInstances",
+                "ec2:TerminateInstances",
+                "ec2:Describe*",
+                "ec2:CreateTags",
+                "ec2:RequestSpotInstances"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::${bucket_name}"
+        }
+    ]
+}
