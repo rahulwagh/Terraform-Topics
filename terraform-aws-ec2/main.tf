@@ -1,8 +1,6 @@
 provider "aws" {
-   region     = "eu-central-1"
-   access_key = ""
-   secret_key = ""
-   
+   region                   = "eu-central-1"
+   shared_credentials_files = ["/Users/rahulwagh/.aws/credentials"]
 }
 
 resource "aws_instance" "ec2_example" {
