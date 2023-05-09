@@ -1,4 +1,4 @@
-terraform {
+/*terraform {
   required_providers {
     google = {
       source = "hashicorp/google"
@@ -19,6 +19,7 @@ resource "google_compute_instance" "terraform-managed-e2-small" {
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
+      #image = "centos-cloud/centos-stream-8"
     }
   }
 
@@ -35,7 +36,7 @@ resource "google_compute_instance" "terraform-managed-e2-small" {
 
 output "gce2-public-ip" {
   value = format("%s%s","ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform rahulwagh@",google_compute_instance.terraform-managed-e2-small.network_interface.0.access_config.0.nat_ip)
-}
+}*/
 
 
 

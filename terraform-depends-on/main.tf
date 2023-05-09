@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "my_test_bucket" {
-  bucket = "test-bucket-1-for-import"
+  bucket = "test-bucket-2-for-import"
   tags = {
     "name" = "test-bucket"
   }
@@ -19,3 +19,6 @@ resource "aws_instance" "ec2_example" {
    }
   depends_on = [aws_s3_bucket.my_test_bucket]
 }
+
+
+
