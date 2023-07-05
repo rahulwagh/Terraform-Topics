@@ -52,11 +52,13 @@ resource "aws_key_pair" "deployer" {
 }
 
 
-/*output "fetched_info_from_aws" {
-  value = format("%s%s","ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform ubuntu@",aws_instance.ec2_example.public_dns)
+output "fetched_info_from_aws" {
+  value = format("%s%s","ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform ubuntu@",aws_instance.ec2_example.public_ip)
 }
 
-variable "email" {
+# ssh -i /Users/rahulwagh/.ssh/aws_ec2_terraform ubuntu@52.59.249.49
+
+/*variable "email" {
   default = "user@example.com"
 }
 
